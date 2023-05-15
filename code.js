@@ -4,12 +4,17 @@ const Knight = function() {
   this.heal = function () {
     this.health += 2;
     alert(`You Healed!  Your health is now ${this.health}`);
-  };
+  }.bind(this);
 
   // You must keep this function working.
   this.getHealth = () => {
     return this.health;
   };
+
+  // attack Gargoyle method
+  this.attackGargoyle = function () {
+    return  monster.slash()
+  }
 }
 
 /**
