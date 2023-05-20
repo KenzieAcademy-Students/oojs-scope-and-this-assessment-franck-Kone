@@ -14,8 +14,30 @@ const Knight = function() {
   // attack Gargoyle method
   this.attackGargoyle = function () {
     return  monster.slash()
+  };
+
+  // attack wizard method
+  this.rocketBOmb = () => {
+    function bomb() {
+      return 3
+    }
+   if(monster.name === 'Wizard') {
+    return monster.giveBomb(bomb)
+   }
+  };
+
+  // attack using pirate song
+  this.mortalSong = () => {
+
+    let verse = "All along of this pirate's life, i was onboarding on my boat, money silver and gold, plunder on enemies tresor, and killed them give to me hearties."
+    if (monster.name === 'Pirate'){
+      return monster.serenade(verse)
+    }
   }
+
 }
+// let verse = "All along of this pirate's life, i was onboarding on my boat, money silver and gold, plunder on enemies tresor, and killed them give to me hearties."
+// console.log(verse.indexOf("pirate's life"))
 
 /**
  * --------------------------------------------------------
@@ -313,3 +335,9 @@ const startTheGame = function() {
 
 // Now Let's start the game!
 startTheGame();
+
+
+
+// plunder
+// me hearties
+// pirate's life
